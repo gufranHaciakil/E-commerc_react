@@ -1,0 +1,50 @@
+.home-container {
+  background-image: url("/public/img2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 97vh;
+}
+.p2 {
+  text-shadow: 0px 0px 2px whitesmoke;
+}
+.some-about {
+  background-image: url("/public/online_shop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50vh;
+}
+.some-p {
+  font-family: "Marcellus", serif;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 3px;
+  animation: opacity 0.5s infinite linear alternate;
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.top-rated {
+  animation: color-change 0.6s infinite linear alternate;
+}
+@keyframes color-change {
+  0% {
+    color: rgb(58, 58, 205);
+  }
+  50% {
+    color: rgb(83, 83, 215);
+  }
+  100% {
+    color: rgb(149, 172, 194);
+  }
+}

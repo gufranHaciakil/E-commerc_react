@@ -1,0 +1,119 @@
+.err-text {
+  width: 35%;
+}
+.reg-form label,
+.log-form label {
+  position: absolute;
+  top: -0.7rem;
+  left: 0.7rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(208, 206, 206);
+  /* margin-bottom: 0.5rem; */
+  transition: 0.4s;
+  background-color: white;
+  width: fit-content;
+  padding: 0 0.5rem;
+  z-index: 0;
+}
+
+.reg-form input,
+.log-form input {
+  width: 45%;
+  padding-left: 5px;
+  box-shadow: 0 0 5px -2px inset;
+  padding: 1rem;
+  border-radius: 3px;
+  border-bottom: 3px solid transparent;
+  margin-bottom: 0.7rem;
+}
+.reg-form input:focus,
+.log-form input:focus {
+  outline: none;
+}
+.reg-form input:focus:valid,
+.log-form input:focus:valid {
+  border-bottom: 3px solid green;
+}
+.reg-form input:focus:invalid,
+.log-form input:focus:invalid {
+  border-bottom: 3px solid orangered;
+}
+.reg-form input:placeholder-shown + label,
+.log-form input:placeholder-shown + label {
+  opacity: 0;
+  top: 20px;
+}
+
+.reg-form,
+.log-form {
+  background-image: linear-gradient(
+      120deg,
+      white 0%,
+      white 50%,
+      transparent 50%
+    ),
+    url("../../public/auth.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 5px 2px rgb(209, 209, 209);
+  animation-name: auth-form;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes auth-form {
+  from {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.reg-form .f-item,
+.log-form .f-item {
+  width: 80%;
+}
+
+@media (max-width: 614px) {
+  .reg-form,
+  .log-form {
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.457) 0%,
+        white 100%
+      ),
+      url("../../public/auth.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 5px 2px rgb(209, 209, 209);
+    width: 95%;
+    max-width: 0 auto;
+    border-radius: 10px;
+  }
+  .reg-form .f-item,
+  .log-form .f-item {
+    width: 100%;
+  }
+  .reg-form input,
+  .log-form input {
+    width: 90%;
+    background-color: rgba(237, 236, 236, 0.814);
+    margin-bottom: 1.3rem;
+  }
+  .reg-form label,
+  .log-form label {
+    background-color: transparent;
+    color: white;
+    top: -1rem;
+    left: 0;
+  }
+  .err-text {
+    width: 60%;
+  }
+}

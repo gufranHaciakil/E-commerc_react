@@ -1,0 +1,6 @@
+.active p {
+  color: cornflowerblue !important;
+}
+.active svg {
+  color: rgba(0, 89, 255, 0.913);
+}
